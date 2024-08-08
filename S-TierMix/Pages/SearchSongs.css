@@ -1,0 +1,117 @@
+/* Reset some basic elements */
+body, h1, input, select, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dela Gothic One', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/Images/b2.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="search"] {
+    padding: 10px;
+    border-radius: 50px 0 0 50px;
+    border: 1px solid #ddd;
+    width: 600px;
+    outline: none;
+    font-size: 1em;
+}
+
+input[type="search"]::placeholder {
+    color: #888;
+    font-family: sans-serif ;
+}
+
+button[type="submit"],
+button[type="getPlaylist"] {
+    padding: 10px 20px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    background-color: #1db954;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.generate-playlist{
+    position: fixed;
+    bottom: 10%;
+}
+
+button[type="submit"] {
+    border-radius: 0 50px 50px 0;
+    margin-left: -1px; /* Adjust to remove the border gap between input and button */
+}
+
+button[type="submit"]:hover,
+button[type="getPlaylist"]:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+button[type="submit"]:active,
+button[type="getPlaylist"]:active {
+    transform: scale(0.95);
+}
+
+button[type="getPlaylist"] {
+    border-radius: 50px;
+    margin: 10px 5px;
+}
+
+select {
+    margin-top: 20px;
+    padding: 10px;
+    width: 700px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-family:sans-serif;
+    font-size: 1em;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+select option {
+    padding: 10px;
+}
+
+select[multiple] {
+    height: 150px; 
+}
+
+@media (max-width: 600px) {
+    input[type="search"], select, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    button[type="submit"] {
+        margin-top: 10px;
+    }
+}
