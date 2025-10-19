@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="SearchSongs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <title>S-Tier Mix</title>
+</head>
+<body onload="onPageLoad()">
+    <h1>Enter your song:</h1>
+    <div class="search-container">
+        <input type="search" id="songName" placeholder="Search a song">
+        <button type="submit" onclick="searchSong()">Search</button>
+    </div>
+    <select id="resultsDropdown" onchange="storeSelectedSong()" class="results-container">
+        <option value="">Select a song...</option>
+    </select>
+    
+    <button type="getPlaylist" onclick="generatePlaylist()"class="generate-playlist">Generate Playlist!</button>
+    <script src="server.js"></script>
+</body>
+</html>
