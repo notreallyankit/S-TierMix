@@ -247,5 +247,4 @@ function addTracksToPlaylist(playlistId,trackUris){
         alert('Playlist created and tracks added!');
     })
     .catch(error => console.error('Error adding tracks to playlist:', error));
-    // window.location.href = 'thanks.html';
 }
